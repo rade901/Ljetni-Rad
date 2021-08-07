@@ -78,6 +78,7 @@ body{
     background-image: url(../../img/pozadina.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(28, 28, 28) ;
 }
 p{
     color: white;
