@@ -3,7 +3,9 @@
     background-color: rgb(228, 227, 227);
 }
 label{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: black 2px 2px;
 }
 .grid-container{
     margin-top: 120px;
@@ -11,10 +13,6 @@ label{
 .index{
     background-color: rgb(28, 28, 28);
 }
-   .img-circle {
-    border-radius: 50%;
-    border: white 1px solid;
-  }
   .container{
       margin-top: 100px;
       color: white;
@@ -72,6 +70,20 @@ label{
 }
 .autoservisNaslov{
     font-family: 'Hahmlet', serif;
-    font-size: 3rem; 
+    font-size: 3.5rem;
+    font-weight: bold; 
+    text-shadow: black 2px 2px;
+}
+body{
+    background-image: url(../../img/pozadina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    color: white;
+    text-shadow: black 2px 2px;
+}
+h3{
+    text-shadow: white 2px 2px;
 }
 

@@ -54,7 +54,6 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
         <input type="text" class="form-control mb-2" placeholder="Adresa" name="adresa" required><br>
         <input type="date" class="form-control mb-2" placeholder=" Korisnik Dolazak " name="dolazak" required><br>
         <button class="alert button" name="submit">Spremi</button>
-        <a href="../admin.php" class="alert button">Odustani</a>
       </form>
     </div>
   </div>

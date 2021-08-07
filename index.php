@@ -41,9 +41,8 @@
           <div class="col-md-3 col-sm-6 text-center">
             <div class="wrap animated" data-animate="fadeInDown">
               <div class="img-team">
-                <img src="./img/car3.jpg" alt="" class="img-circle">
-              </div>
               <h1 class="autoservisNaslov">Autoservis</h1>
+              </div>
           </div>
         </div>
       </div> <!-- /.container -->
