@@ -1,6 +1,7 @@
 <?php
 //DB connection//
 $conn = mysqli_connect("Localhost", "root", "", "crud");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,16 +18,22 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
 </head>
 
 <body>
+    <?php
+    $conn = mysqli_connect("Localhost", "root", "", "crud");
+    $result =mysqli_query($conn, "SELECT COUNT(*) AS count FROM records");
+    $row = mysqli_fetch_array($result);
+    $count = $row['count'];
+    ?>
   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Auto servis</li>
-        <a href="./first.php">Pocetna</a>
+        <a href="../index.php">Pocetna</a>
         <li class="has-submenu">
           <a href="#0">Opcije</a>
           <ul class="submenu menu vertical" data-submenu>
-          <li><a href="../dodavanjeKlijenata\index.php">Dodaj</a></li>
-        <li><a href="./users.php">Postojeci klijenti</a></li>
+          <li><a href="../dodavanjeKlijenata\index.php">Dodaj klijenta</a></li>
+          <li><a href="./users.php">Postojeci klijenti</a></li>
           </ul>
         </li>
         <a href="#">Dobrodošli</a>
@@ -41,19 +48,19 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
     </div>
   </div>
   <div class="grid-container">
-    <div class="callout pocetna">
-      <h5>Unos klijenta</h5>
-      <form action="insert.php" method="post">
-        <input type="text" class="form-control mb-2" placeholder="Korisnik Ime" name="Ime" required><br>
-        <input type="text" class="form-control mb-2" placeholder="Korisnik Prezime" name="prezime" required><br>
-        <input type="text" class="form-control mb-2" placeholder="Korisnik Usluga" name="usluga" required><br>
-        <input type="number" class="form-control mb-2" placeholder="Korisnik Kontakt" name="kontakt" required><br>
-        <input type="email" class="form-control mb-2" placeholder="Email" name="email" required><br>
-        <input type="text" class="form-control mb-2" placeholder="Adresa" name="adresa" required><br>
-        <input type="date" class="form-control mb-2" placeholder=" Korisnik Dolazak " name="dolazak" required><br>
-        <button class="alert button" name="submit">Spremi</button>
-      </form>
+  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+    <div class="cell">
+      <div class="card">
+        <div class="card-section">
+        <h4>Ukupan broj klijenata</h4>
+          <p><?php echo $row['count']; ?></p>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+  </div>
+</div>
   </div>
   </div>
   </div>

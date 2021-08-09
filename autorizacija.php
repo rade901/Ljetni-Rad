@@ -18,7 +18,7 @@ if($postoji){
 
  
 
-    header('location:' . $putanjaAplikacije . './dodavanjeKlijenata/index.php');
+    header('location:' . $putanjaAplikacije . './dodavanjeKlijenata/first.php');
 }else{
     header('location:' . $putanjaAplikacije . 'index.php');
 }

@@ -24,21 +24,22 @@ $conn = mysqli_connect("Localhost","root","","crud");
     <title>Prijava</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Auto servis</li>
-      <a href="../index.php">Početna</a>
+      <a href="./first.php">Početna</a>
       <li class="has-submenu">
-        <a href="#0">Usluge</a>
+        <a href="#0">Opcije</a>
         <ul class="submenu menu vertical" data-submenu>
-          <li><a href="#0">Punjenje klima</a></li>
-          <li><a href="#0">Mehanika</a></li>
-          <li><a href="#0">Autoelektrika/Diagnostika</a></li>
+        <li><a href="../dodavanjeKlijenata\index.php">Dodaj klijenta</a></li>
+        <li><a href="./users.php">Postojeci klijenti</a></li>
         </ul>
-        <li><a href="../dodavanjeKlijenata\index.php">admin</a></li>
       </li>
       <a href="#">Dobrodošli</a><p></p><a class="odjava" href="../odjava.php">Odjavi me </a></ul>
   </div>
@@ -56,10 +57,10 @@ $conn = mysqli_connect("Localhost","root","","crud");
             <div class="table-scroll">
             <table class="hover">
         
-                            <tr>
-                                <td> Klijent ID </td>
-                                <td> Klijent Ime </td>
-                                <td> Klijent Prezime </td>
+                            <tr id="uzg">
+                                <td> ID </td>
+                                <td> Ime </td>
+                                <td> Prezime </td>
                                 <td> Usluga </td>
                                 <td> Kontakt  </td>
                                 <td> Email </td>

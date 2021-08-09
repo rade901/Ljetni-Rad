@@ -24,6 +24,9 @@ $conn = mysqli_connect("Localhost","root","","crud");
     <title>Prijava</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -31,7 +34,7 @@ $conn = mysqli_connect("Localhost","root","","crud");
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Auto servis</li>
-      <a href="../index.php">Početna</a>
+      <a href="./first.php">Početna</a>
       <li class="has-submenu">
         <a href="#0">Usluge</a>
         <ul class="submenu menu vertical" data-submenu>
@@ -57,9 +60,9 @@ $conn = mysqli_connect("Localhost","root","","crud");
             <div class="table-scroll">
             <table class="hover">
                             <tr>
-                            <td> Klijent ID </td>
-                                <td> Klijent Ime </td>
-                                <td> Klijent Prezime </td>
+                            <td>ID</td>
+                                <td> Ime </td>
+                                <td> Prezime </td>
                                 <td> Usluga </td>
                                 <td> Kontakt  </td>
                                 <td> Email </td>

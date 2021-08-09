@@ -1,6 +1,6 @@
 <?php require_once 'konfiguracija.php'; 
 if(isset($_SESSION['autoriziran'])){
-    header('location:' . $putanjaAplikacije . './dodavanjeKlijenata/index.php');
+    header('location:' . $putanjaAplikacije . './dodavanjeKlijenata/first.php');
     exit;
 }
 ?>
@@ -16,7 +16,8 @@ if(isset($_SESSION['autoriziran'])){
     <title>Prijava</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    
+    <script src="./assets/sweet-alert/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="./assets/sweet-alert/sweetalert2.min.css">
 </head>
 <body>
 <div class="top-bar">
@@ -50,7 +51,7 @@ if(isset($_SESSION['autoriziran'])){
     </div>
 
     <div class="btn">
-      <input name="submit" type="submit" class="button radius success" value="Prijavi se">
+      <button name="submit" type="submit" class="button radius success" value="Prijavi se">Prijavi se</button>
       <p>sifre</p>
       <p>rade@901.hr=r</p>
       <p>ivana@901.hr=i</p>
