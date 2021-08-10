@@ -15,8 +15,8 @@ foreach($korisnici as $email=>$lozinka){
 
 if($postoji){
     $_SESSION['autoriziran']=$_POST['email'];
+    
 
- 
 
     header('location:' . $putanjaAplikacije . './dodavanjeKlijenata/first.php');
 }else{

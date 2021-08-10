@@ -11,7 +11,7 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="stylesheet" href="../assets/css/foundation.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
-  <title>Prijava</title>
+  <title>Dodaj klijenta</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
@@ -25,8 +25,8 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
         <li class="has-submenu">
           <a href="#0">Opcije</a>
           <ul class="submenu menu vertical" data-submenu>
-          <li><a href="../dodavanjeKlijenata\index.php">Dodaj</a></li>
-        <li><a href="./users.php">Postojeci klijenti</a></li>
+            <li><a href="./index.php">Dodaj</a></li>
+            <li><a href="./View.php">Postojeci klijenti</a></li>
           </ul>
         </li>
         <a href="#">Dobrodošli</a>

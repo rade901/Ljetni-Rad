@@ -12,18 +12,25 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="stylesheet" href="../assets/css/foundation.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
-  <title>Prijava</title>
+  <title>Početna stranica</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <?php
-    $conn = mysqli_connect("Localhost", "root", "", "crud");
-    $result =mysqli_query($conn, "SELECT COUNT(*) AS count FROM records");
-    $row = mysqli_fetch_array($result);
-    $count = $row['count'];
-    ?>
+  <?php
+  $conn = mysqli_connect("Localhost", "root", "", "crud");
+  $result = mysqli_query($conn, "SELECT COUNT(*) AS count FROM records");
+  $row = mysqli_fetch_array($result);
+  $count = $row['count'];
+  ?>
+  <script src="../node_modules/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    swal("Autoservis", "Dobrodosli na početnu stranicu", "success")({
+      icon: "success",
+
+    });
+  </script>
   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
@@ -32,8 +39,8 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
         <li class="has-submenu">
           <a href="#0">Opcije</a>
           <ul class="submenu menu vertical" data-submenu>
-          <li><a href="../dodavanjeKlijenata\index.php">Dodaj klijenta</a></li>
-          <li><a href="./users.php">Postojeci klijenti</a></li>
+            <li><a href="../dodavanjeKlijenata\index.php">Dodaj klijenta</a></li>
+            <li><a href="./View.php">Postojeci klijenti</a></li>
           </ul>
         </li>
         <a href="#">Dobrodošli</a>
@@ -48,19 +55,19 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
     </div>
   </div>
   <div class="grid-container">
-  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-    <div class="cell">
-      <div class="card">
-        <div class="card-section">
-        <h4>Ukupan broj klijenata</h4>
-          <p><?php echo $row['count']; ?></p>
+    <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+      <div class="cell">
+        <div class="card">
+          <div class="card-section">
+            <h4>Ukupan broj klijenata</h4>
+            <p id="brojac"><?php echo $row['count']; ?></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   </div>
-</div>
+  </div>
   </div>
   </div>
   </div>
