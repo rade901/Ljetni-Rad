@@ -22,8 +22,6 @@ $result = mysqli_query($con, $query);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
-  <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
@@ -31,7 +29,7 @@ $result = mysqli_query($con, $query);
 </head>
 
 <body>
- <!--Nav bar------------------------------------------------------------------------>
+  <!--Nav bar------------------------------------------------------------------------>
   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
@@ -44,7 +42,7 @@ $result = mysqli_query($con, $query);
             <li><a href="./View.php">Postojeci klijenti</a></li>
           </ul>
         </li>
-        <a href="#">Dobrodošli</a>
+        <a href="../era.php">ERA-diagram</a>
         <p></p><a class="odjava" href="../odjava.php">Odjavi me </a>
       </ul>
     </div>
@@ -55,8 +53,8 @@ $result = mysqli_query($con, $query);
       </ul>
     </div>
   </div>
-   <!--Nav bar------------------------------------------------------------------------>
-    <!--Table------------------------------------------------------------------------>
+  <!--Nav bar------------------------------------------------------------------------>
+  <!--Table------------------------------------------------------------------------>
   <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="callout pocetna">
@@ -104,15 +102,17 @@ $result = mysqli_query($con, $query);
           }
           ?>
         </table>
-         <!--Table------------------------------------------------------------------------>
+        <!--Table------------------------------------------------------------------------>
+
       </div>
     </div>
   </div>
+
 
 </body>
 
 </html>
 
 
-<?php include '../include/admin/script.php';?>
+<?php include '../include/admin/script.php'; ?>
 </body>

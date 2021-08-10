@@ -9,6 +9,7 @@ if(isset($_GET['Del']))
     if($result)
     {
         header("location:View.php");
+        
     }
     else
     {

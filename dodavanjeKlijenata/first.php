@@ -54,7 +54,7 @@ require_once("connection.php");
             <li><a href="./View.php">Postojeci klijenti</a></li>
           </ul>
         </li>
-        <a href="#">Dobrodošli</a>
+        <a href="../era.php">ERA-diagram</a>
         <p></p><a class="odjava" href="../odjava.php">Odjavi me </a>
       </ul>
     </div>

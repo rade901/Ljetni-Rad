@@ -2,7 +2,7 @@
 //štićenje
 sticenjeStranice($putanjaAplikacije);
 ?>
-<!--connection------------------------------------------------------------------------>
+<!--Nav bar------------------------------------------------------------------------>
 <?php
 require_once("connection.php");
 $Korisnik_ID = $_GET['ID'];
@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </li>
         <li><a href="#0">Klijent</a></li>
         <li><a href="../admin.php">admin</a></li>
-        <a href="#">Dobrodošli</a>
+        <a href="../era.php">ERA-diagram</a>
         <p></p><a class="odjava" href="../odjava.php">Odjavi me </a>
       </ul>
     </div>
@@ -84,6 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       </form>
     </div>
   </div>
+  
  <!--Forma Update------------------------------------------------------------------------>
  <!--Fondation------------------------------------------------------------------------>
   <?php include '../include/admin/script.php';?>

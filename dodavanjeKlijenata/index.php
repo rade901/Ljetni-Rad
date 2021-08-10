@@ -27,7 +27,7 @@ require_once("connection.php");
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Auto servis</li>
-        <a href="./first.php">Pocetna</a>
+        <a href="./first.php">Početna</a>
         <li class="has-submenu">
           <a href="#0">Opcije</a>
           <ul class="submenu menu vertical" data-submenu>
@@ -35,7 +35,7 @@ require_once("connection.php");
             <li><a href="./View.php">Postojeci klijenti</a></li>
           </ul>
         </li>
-        <a href="#">Dobrodošli</a>
+        <a href="../era.php">ERA-diagram</a>
         <p></p><a class="odjava" href="../odjava.php">Odjavi me </a>
       </ul>
     </div>

@@ -23,3 +23,4 @@ if($postoji){
 }else{
     header('location:' . $putanjaAplikacije . 'index.php');
 }
+?>
