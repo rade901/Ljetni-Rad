@@ -53,7 +53,7 @@ $result = mysqli_query($con, $query);
     </ul>
   </div>
 </div>
-  <?php echo $_SESSION['autoriziran'] ?>
+  <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="callout pocetna">
       <a href="./insert.php" class="button">Dodaj novi</a>

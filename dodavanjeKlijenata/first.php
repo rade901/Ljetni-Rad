@@ -1,3 +1,7 @@
+<?php require_once '../konfiguracija.php';
+//štićenje
+sticenjeStranice($putanjaAplikacije);
+?>
 <?php
 //DB connection//
 $conn = mysqli_connect("Localhost", "root", "", "crud");
@@ -54,6 +58,7 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
       </ul>
     </div>
   </div>
+  <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="grid-x grid-margin-x small-up-2 medium-up-3">
       <div class="cell">

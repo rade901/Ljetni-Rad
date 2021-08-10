@@ -1,3 +1,7 @@
+<?php require_once '../konfiguracija.php';
+//štićenje
+sticenjeStranice($putanjaAplikacije);
+?>
 <?php 
     require_once("connection.php");
     $Korisnik_ID = $_GET['ID'];
@@ -55,6 +59,7 @@
     </ul>
   </div>
 </div>
+<h4><?php echo  $_SESSION['autoriziran'] ?></h4>
 <div class="grid-container">
         <div class="callout pocetna">
         <a href="../admin.php" class="alert button">Odustani</a>
