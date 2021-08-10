@@ -2,10 +2,7 @@
 //štićenje
 sticenjeStranice($putanjaAplikacije);
 ?>
-<?php
-$conn = mysqli_connect("Localhost", "root", "", "crud");
-
-?>
+<!--connection------------------------------------------------------------------------>
 <?php
 require_once("connection.php");
 $query = " select * from records ";
@@ -19,40 +16,47 @@ $result = mysqli_query($con, $query);
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="stylesheet" href="../assets/css/foundation.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>Prijava</title>
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
 </head>
 
 <body>
-
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Auto servis</li>
-      <a href="./first.php">Početna</a>
-      <li class="has-submenu">
-        <a href="#0">Opcije</a>
-        <ul class="submenu menu vertical" data-submenu>
-        <li><a href="./index.php">Dodaj klijenta</a></li>
-        <li><a href="./View.php">Postojeci klijenti</a></li>
-        </ul>
-      </li>
-      <a href="#">Dobrodošli</a><p></p><a class="odjava" href="../odjava.php">Odjavi me </a></ul>
+ <!--Nav bar------------------------------------------------------------------------>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Auto servis</li>
+        <a href="./first.php">Početna</a>
+        <li class="has-submenu">
+          <a href="#0">Opcije</a>
+          <ul class="submenu menu vertical" data-submenu>
+            <li><a href="./index.php">Dodaj klijenta</a></li>
+            <li><a href="./View.php">Postojeci klijenti</a></li>
+          </ul>
+        </li>
+        <a href="#">Dobrodošli</a>
+        <p></p><a class="odjava" href="../odjava.php">Odjavi me </a>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li>
+      </ul>
+    </div>
   </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
-</div>
+   <!--Nav bar------------------------------------------------------------------------>
+    <!--Table------------------------------------------------------------------------>
   <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="callout pocetna">
@@ -94,17 +98,15 @@ $result = mysqli_query($con, $query);
               <td><?php echo $Korisnik_adresa ?></td>
               <td><?php echo $Korisnik_dolazak ?></td>
               <td><a class="button warning" href="edit.php?ID=<?php echo $Korisnik_ID ?>">Edit</a></td>
-              <td><a class="button alert" href="delete.php?Del=<?php echo $Korisnik_ID ?>">Delete</a></td>
+              <td><a class="button alert" id="spremi" href="delete.php?Del=<?php echo $Korisnik_ID ?>">Delete</a></td>
             </tr>
           <?php
           }
           ?>
-         
-
         </table>
+         <!--Table------------------------------------------------------------------------>
       </div>
     </div>
-  </div>
   </div>
 
 </body>
@@ -112,11 +114,5 @@ $result = mysqli_query($con, $query);
 </html>
 
 
-<!--fondation js-->
-<script src="../assets\js\vendor.js"></script>
-<script src="../assets\js\foundation.js.map"></script>
-<script src="../assets\js\foundation.js"></script>
-<script>
-  $(document).foundation();
-</script>
+<?php include '../include/admin/script.php';?>
 </body>

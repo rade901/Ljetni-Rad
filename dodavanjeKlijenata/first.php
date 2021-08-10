@@ -2,9 +2,9 @@
 //štićenje
 sticenjeStranice($putanjaAplikacije);
 ?>
+<!--connection------------------------------------------------------------------------>
 <?php
-//DB connection//
-$conn = mysqli_connect("Localhost", "root", "", "crud");
+require_once("connection.php");
 
 ?>
 <!DOCTYPE html>
@@ -13,33 +13,40 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="stylesheet" href="../assets/css/foundation.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>Početna stranica</title>
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="../include/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
 </head>
 
 <body>
+  <!--sweet alert------------------------------------------------------------------------>
+  <script>
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Dobro došao na početnu stranicu',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  </script>
+  <!--sweet alert------------------------------------------------------------------------>
   <?php
   $conn = mysqli_connect("Localhost", "root", "", "crud");
   $result = mysqli_query($conn, "SELECT COUNT(*) AS count FROM records");
   $row = mysqli_fetch_array($result);
   $count = $row['count'];
   ?>
-  <script src="../node_modules/sweetalert/dist/sweetalert.min.js"></script>
-  <script>
-    swal("Autoservis", "Dobrodosli na početnu stranicu", "success")({
-      icon: "success",
-
-    });
-  </script>
+  <!--Nav bar------------------------------------------------------------------------>
   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Auto servis</li>
-        <a href="../index.php">Pocetna</a>
+        <a href="./first.php">Pocetna</a>
         <li class="has-submenu">
           <a href="#0">Opcije</a>
           <ul class="submenu menu vertical" data-submenu>
@@ -58,6 +65,8 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
       </ul>
     </div>
   </div>
+  <!--Nav bar------------------------------------------------------------------------>
+  <!--Background------------------------------------------------------------------------>
   <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="grid-x grid-margin-x small-up-2 medium-up-3">
@@ -71,20 +80,8 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
       </div>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!--fondation js-->
-  <script src="../assets/js/vendor.js"></script>
-  <script src="../assets/js/foundation.js"></script>
-  <script src="../assets/js/foundation.js.map"></script>
-  <script>
-    $(document).foundation();
-  </script>
+  <!--Background------------------------------------------------------------------------>
+  <?php include '../include/admin/script.php';?>
 </body>
 
 </html>

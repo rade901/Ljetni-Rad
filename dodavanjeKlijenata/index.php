@@ -2,9 +2,9 @@
 //štićenje
 sticenjeStranice($putanjaAplikacije);
 ?>
+<!--connection------------------------------------------------------------------------>
 <?php
-//DB connection//
-$conn = mysqli_connect("Localhost", "root", "", "crud");
+require_once("connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,15 +12,17 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="stylesheet" href="../assets/css/foundation.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
   <title>Dodaj klijenta</title>
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+  <!--Nav bar------------------------------------------------------------------------>
   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
@@ -44,6 +46,8 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
       </ul>
     </div>
   </div>
+  <!--Nav bar------------------------------------------------------------------------>
+  <!--Form------------------------------------------------------------------------>
   <h4><?php echo  $_SESSION['autoriziran'] ?></h4>
   <div class="grid-container">
     <div class="callout pocetna">
@@ -60,17 +64,10 @@ $conn = mysqli_connect("Localhost", "root", "", "crud");
       </form>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!--fondation js-->
-  <script src="../assets/js/vendor.js"></script>
-  <script src="../assets/js/foundation.js"></script>
-  <script src="../assets/js/foundation.js.map"></script>
-  <script>
-    $(document).foundation();
-  </script>
+   <!--Form------------------------------------------------------------------------>
+    <!--fondation------------------------------------------------------------------------>
+  <?php include '../include/admin/script.php';?>
+   <!--Fondation------------------------------------------------------------------------>
 </body>
 
 </html>
